@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<BorderPane styleClass="stylebackground" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.ListFournisseurControlleur">
+   <top>
+      <AnchorPane prefHeight="400.0" prefWidth="600.0" styleClass="styleLabelL3" stylesheets="@application.css" BorderPane.alignment="CENTER">
+    
+         <children>
+            <TableView fx:id="tableFournisseurs" layoutX="26.0" layoutY="169.0" prefHeight="200.0" prefWidth="850.0">
+              <columns>
+                  <TableColumn fx:id="Nom" prefWidth="185.0" text="Nom" />
+                <TableColumn fx:id="Adresse" prefWidth="192.0" text="Adresse" />
+                <TableColumn fx:id="Telephone" minWidth="9.0" prefWidth="188.0" text="Telephone" />
+                  <TableColumn fx:id="Email" prefWidth="227.0" text="Email" />
+              </columns>
+               <padding>
+                  <Insets top="50.0" />
+               </padding>
+            </TableView>
+            <MenuBar layoutY="30.0" prefHeight="32.0" prefWidth="900.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Produits" />
+                <Menu mnemonicParsing="false" text="Fournisseurs">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Finance">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="A propos">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <ImageView fitHeight="80.0" fitWidth="100.0" layoutX="32.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../logo-isika.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="355.0" layoutY="376.0" text="Copyright@ISIKA 2022">
+               <textFill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="0.16304347826086957" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </RadialGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="Listfournisseurs" layoutX="371.0" layoutY="94.0" text="Liste fournisseurs">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="BLACK" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Separator layoutX="330.0" layoutY="375.0" prefWidth="200.0" />
+            <Label layoutX="356.0" layoutY="4.0" text="Gestion des Fournisseurs">
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="BLACK" />
+                        <Stop color="WHITE" offset="0.007246376811594203" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill></Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
